@@ -7,6 +7,8 @@ metadata = Hash()
 def seed():
     metadata['token_name'] = 'Rocketswap'
     metadata['token_symbol'] = 'RSWP'
+    balances[ctx.caller] = 1_000_000_000
+    balances['con_index'] = 120000
  
 @export
 def change_metadata(key: str, value: Any):
